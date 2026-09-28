@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Ekstrakurikuler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Elemen lingkaran bergerak di background -->
+    <div class="bg-animation">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="form-container">
+        <h2>Pendaftaran Ekstrakurikuler</h2>
+        <p class="form-subtitle">Silahkan isi Data diri dengan benar!!</p>
+        <form id="registrationForm" novalidate>
+            <div class="input-group">
+                <label for="fullname">Nama Lengkap</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Masukkan nama lengkap">
+                <small class="error-message"></small>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="nama@email.com">
+                <small class="error-message"></small>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Minimal 8 karakter">
+                <small class="error-message"></small>
+            </div>
+
+            <div class="input-group">
+                <label for="confirmPassword">Konfirmasi Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Ulangi password">
+                <small class="error-message"></small>
+            </div>
+
+            <div class="input-group">
+                <label for="extracurricular">Pilihan Ekstrakurikuler</label>
+                <select id="extracurricular" name="extracurricular">
+                    <option value="">-- Pilih Ekstrakurikuler --</option>
+                    <option value="paskibra">Paskibra</option>
+                    <option value="pmr">PMR</option>
+                    <option value="pramuka">Pramuka</option>
+                    <option value="it_club">Padus</option>
+                    <option value="rohis">Rohis</option>
+                    <option value="rohis">Tari</option>
+                    <option value="rohis">Rebana</option>
+                    <option value="rohis">Jurnalistik</option>
+                    <option value="rohis">Olahraga</option>
+                    <option value="rohis">Pencak Silat</option>
+                    <option value="rohis">Drumband</option>
+
+                </select>
+                <small class="error-message"></small>
+            </div>
+
+            <button type="submit" id="submitBtn">Kirim Pendaftaran</button>
+            <div id="successMessage" class="success-alert"></div>
+        </form>
+    </div>
+    <!-- WIDGET CHATBOT -->
+    <div id="chat-widget">
+        <!-- Tombol ikon chat di pojok kanan bawah -->
+        <button id="chat-toggle-btn">💬</button>
+
+        <!-- Kotak jendela chat -->
+        <div id="chat-box" class="chat-hidden">
+            <div class="chat-header">
+    <div class="chat-profile">
+        <!-- Kamu bisa pakai emoji robot 🤖 atau ganti link foto/ikon -->
+        <span class="profile-avatar">🤖</span>
+        <span class="profile-name">Asisten Ekskul</span>
+    </div>
+    <button id="chat-close-btn">&times;</button>
+</div>
+            <div class="chat-body" id="chatBody">
+                <div class="chat-message bot-msg">Halo! Ada yang bisa dibantu terkait pendaftaran ekstrakurikuler?</div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="chatInput" placeholder="Ketik pesan...">
+                <button id="chatSendBtn">Kirim</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
+
+    <script src="script.js"></script>
+</body>
+</html>
